@@ -32,10 +32,11 @@ jobs:
             libncursesw5-dev cmake \
             libffi-dev libssl-dev automake gettext
 
-      - name: Set up Android SDK
+            - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
-          cmdline-tools-version: 12266719
+          cmdline-tools-version: latest
+          accept-android-sdk-licenses: true
 
       - name: Install Android SDK packages
         run: |
